@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BroCode tutorial</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>JavaScript tutorial results</h1>
+        </div>
+    </header>
+    <main>
+        <section class="slider">
+            <div class="container slider-content">
+                <h2>Slider</h2>
+                <div class="slides">
+                    <img src="slider/1.jpg" alt="slider-image1" class="slide-img active">
+                    <img src="slider/2.jpg" alt="slider-image2" class="slide-img">
+                    <img src="slider/3.jpg" alt="slider-image2" class="slide-img">
+                </div>
+                <button class="btn-prev clider-btn">&#10094</button>
+                <button class="btn-next clider-btn">&#10095</button>
+            </div>
+        </section>
+        <section class="rock-sec">
+            <div class="container">
+                <h2>КАМЕНЬ НОЖНИЦА БУМАГА</h2>
+                <div class="btns">
+                    <button class="btn game-btns">КАМЕНЬ</button>
+                    <button class="btn game-btns">НОЖНИЦА</button>
+                    <button class="btn game-btns">БУМАГА</button>
+                </div>
+                <p class="player">player: </p>
+                <p class="computer">computer: </p>
+                <p class="result">result: </p>
+            </div>
+        </section>
+        <section class="counetSec">
+            <div class="container">
+                <h2>Counter</h2>
+                <div class="counter">
+                    <p class="number" id="number">0</p>
+                    <div class="buttons">
+                        <button class="btn" id="minus">-</button>
+                        <button class="btn" id="reset">reset</button>
+                        <button class="btn" id="plus">+</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="randomizerSec">
+            <div class="container">
+                <h2>Rondomizer</h2>
+                <div class="randomizer">
+                    <label>Type min number:</label>
+                    <input id="min" type="text">
+                    <label>Type max number:</label>
+                    <input id="max" type="text">
+                    <button id="randomize" class="btn">Randomize</button>
+                    <p id="random-p"></p>
+                </div>
+            </div>
+        </section>
+        <section class="temperatureSec">
+            <div class="container">
+                <form action="" class="temperature">
+                    <h2>Temperature conversion:</h2>
+                    <input type="number" id="tempNum" value="0">
+
+                    <div class="temp-group">
+                        <input type="radio" id="f" name="temp">
+                        <label for="f">F to C</label>
+                    </div>
+                    <div class="temp-group">
+                        <input type="radio" id="c" name="temp">
+                        <label for="c">C to F</label>
+                    </div>
+                    <button type="button" id="temp-btn" onclick="convert()" class="btn">Submit</button>
+                    <p id="temp-res"></p>
+                </form>
+            </div>
+        </section>
+        <section class="diceRollerSec">
+            <div class="container">
+                <h2>Dice roller</h2>
+                <div class="diceRoller">
+                    <label for="diceNum">Number of dice:</label>
+                    <input type="number" name="diceNum" id="diceNum" value="1" min="1">
+                    <button type="button" onclick="rollDice()" class="btn">Roll</button>
+                    <div id="diceRes"></div>
+                    <div id="diceImg"></div>
+                </div>
+            </div>
+        </section>
+        <section class="passwordGenSec">
+            <div class="container">
+                <h2>Password Generator</h2>
+                <div class="passwordGen">
+                    <label for="passLength">Length of the password: </label>
+                    <input type="number" name="passGen" id="passLength"><br>
+                    <input type="checkbox" name="passGen" id="passLower">
+                    <label for="passLower">Include lower case characters</label><br>
+                    <input type="checkbox" name="passGen" id="passUpper">
+                    <label for="passUpper">Include upper case characters</label><br>
+                    <input type="checkbox" name="passGen" id="passNumbers">
+                    <label for="passNumbers">Include numbers</label><br>
+                    <input type="checkbox" name="passGen" id="passSymbols">
+                    <label for="passSymbols">Include symbols</label><br>
+                    <button id="passBtn" class="btn">Get my Password</button>
+                    <p id="passRes"></p>
+                </div>
+            </div>
+        </section>
+        <section class="clock">
+            <div class="container">
+                <p id="clockDisplay">00:00:00</p>
+            </div>
+        </section>
+        <section class="timer_sec">
+            <div class="container timer">
+                <p id="timerDisplay">00:00:00</p>
+                <button id="btnStart" class="btn">Start</button>
+            </div>
+        </section>
+        <!-- <section id="section">
+            <div class="container btns">
+                <button class="btn testBtn">btn</button>
+            </div>
+            <div class="container btns">
+                <button class="btn testBtn">btn</button>
+            </div>
+            <div class="container btns">
+                <button class="btn testBtn">btn</button>
+            </div>
+            <div class="container btns">
+                <button class="btn testBtn">btn</button>
+            </div>
+        </section> -->
+
+    </main>
+    <footer>
+
+    </footer>
+    <script src="index.js"></script>
+</body>
+
+</html>
