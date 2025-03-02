@@ -296,11 +296,11 @@ gamebtns.forEach(btn => {
 
         switch (res) {
             case "Проиграл":
-                result.classList.remove("win");
+                result.classList.remove("win", "lose");
                 result.classList.add("lose");
                 break;
             case "Выиграл":
-                result.classList.remove("lose");
+                result.classList.remove("win", "lose");
                 result.classList.add("win");
                 break;
             case "Ничья":
@@ -390,3 +390,26 @@ function fourth(callback) {
 //         })
 //     })
 // })
+
+// fetch("https://pokeapi.co/api/v2/pokemon/pikachu")
+// .then(responce => responce.json())
+// .then(data => console.log(data.id))
+// .catch(err => console.error(err))
+
+
+async function pokemonFetching() {
+    try {
+        const inputName = document.getElementById('pokemonName').value.toLowerCase();
+        const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${inputName}`)
+        const jsonPokemon = await response.json()
+        
+        const pokemonImg = document.querySelector('.pokemon-img');
+        pokemonImg.setAttribute('src', jsonPokemon.sprites.front_default)
+        pokemonImg.classList.add('active')
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+const btnPokemon = document.querySelector('.btnFetch');
+btnPokemon.addEventListener('click', pokemonFetching)

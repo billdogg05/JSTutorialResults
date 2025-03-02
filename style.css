@@ -30,6 +30,22 @@ img {
     background: rgba(10, 165, 173, 0.5);
 }
 
+/* Pokemon Fetching */
+.pokemon-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.pokemon-img {
+    visibility: hidden;
+    width: 96px;
+    height: 96px;
+}
+.pokemon-img.active {
+    visibility: visible;
+}
+
 /* Counter */
 .counetSec {
     background: #c56a6a;
