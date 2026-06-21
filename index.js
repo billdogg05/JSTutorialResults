@@ -115,48 +115,6 @@ function rollDice() {
 }
 
 
-// PASSWORDS GENERATOR
-function passGen(length, lowerCase, upperCase, numbers, symbols) {
-    const lowerChars = "abcdefghijklmnopqrstuvwxyz";
-    const upperChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    const numberChars = "0123456789";
-    const symbolChars = "!@#$%^&*()_";
-    let allowedChar = "";
-    allowedChar += lowerCase ? lowerChars : "";
-    allowedChar += upperCase ? upperChars : "";
-    allowedChar += numbers ? numberChars : "";
-    allowedChar += symbols ? symbolChars : "";
-
-    if (length <= 5) {
-        return "(Password must least more than 5 characters)"
-    }
-    else if (allowedChar.length === 0) {
-        return "At least one option must be selected"
-    }
-    else {
-        let password = "";
-        for (let i = 0; i < length; i++) {
-            let randomIndex = Math.floor(Math.random() * allowedChar.length);
-            password += allowedChar[randomIndex];
-        }
-        return `Your generated password: ${password}`;
-    }
-    return "Something went wrong";
-}
-
-const passBtn = document.getElementById("passBtn");
-passBtn.onclick = function () {
-    const passLength = document.getElementById("passLength").value;
-    const passLower = document.getElementById("passLower").checked;
-    const passUpper = document.getElementById("passUpper").checked;
-    const passNumbers = document.getElementById("passNumbers").checked;
-    const passSymbols = document.getElementById("passSymbols").checked;
-    const passRes = document.getElementById("passRes");
-
-    passRes.textContent = passGen(passLength, passLower, passUpper, passNumbers, passSymbols);
-}
-
-
 // TEST
 // function hello() {
 //     console.log("Helo");
@@ -265,50 +223,7 @@ function timerFun(timerUpdate) {
 
 
 // КАМЕНЬ НОЖНИЦА БУМАГА
-const gamebtns = document.querySelectorAll(".game-btns")
-const player = document.querySelector(".player")
-const computer = document.querySelector(".computer")
-const result = document.querySelector(".result")
-const choice = ["КАМЕНЬ", "НОЖНИЦА", "БУМАГА"]
-let res = "";
 
-gamebtns.forEach(btn => {
-    btn.addEventListener("click", event => {
-        const compChoice = choice[Math.floor(Math.random() * 3)]
-        player.textContent = "player: " + event.target.innerHTML;
-        computer.textContent = "computer: " + compChoice;
-        if (compChoice === event.target.innerHTML) {
-            res = "Ничья"
-        } else {
-            switch (event.target.innerHTML) {
-                case "КАМЕНЬ":
-                    res = (compChoice == "БУМАГА") ? "Проиграл" : "Выиграл";
-                    break;
-                case "НОЖНИЦА":
-                    res = (compChoice == "КАМЕНЬ") ? "Проиграл" : "Выиграл";
-                    break;
-                case "БУМАГА":
-                    res = (compChoice == "НОЖНИЦА") ? "Проиграл" : "Выиграл";
-                    break;
-            }
-        }
-        result.textContent = res;
-
-        switch (res) {
-            case "Проиграл":
-                result.classList.remove("win", "lose");
-                result.classList.add("lose");
-                break;
-            case "Выиграл":
-                result.classList.remove("win", "lose");
-                result.classList.add("win");
-                break;
-            case "Ничья":
-                result.classList.remove("win", "lose");
-                break;
-        }
-    })
-})
 
 
 // Slider

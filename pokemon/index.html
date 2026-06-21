@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>Pokémon Card</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="../index.html" class="header-title"><img src="../assets/arrow-left.svg" alt="arrow left icon"
+                        class="header-icon">Menu</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <div class="medium-container">
+                <h1>Pokémon Card</h1>
+                <p class="description">Enter a Pokémon's number (e.g. 001) or name (e.g. Bulbasaur) in the field below, then press Display to load its info.</p>
+                <div class="small-container">
+                    <div class="pokemon-field">
+                        <label for="pokemon">Pokémon's Number or Name</label>
+                        <input type="text" id="pokemon" placeholder="Enter Pokemon name/number">
+                        <button id="pokemon-btn">Display</button>
+                    </div>
+                    <p id="error"></p>
+                    <div class="pokemon-card">
+                        <div class="pokemon-card-top">
+                            <div class="pokemon-naming">
+                                <div>
+                                    <h4 id="pokemon-name">Name</h4>
+                                    <div class="highlight" id="pokemon-number">#number</div>
+                                </div>
+                                <div class="pokemon-types">
+                                    <p>type 1</p>
+                                    <p>type 2</p>
+                                </div>
+                            </div>
+                            <div class="pokemon-img">
+                                <img src="" alt="pokemon front image">
+                                <img src="" alt="pokemon back image">
+                            </div>
+                        </div>
+                        <div class="pokemon-card-bottom">
+                            <div class="pokemon-stats">
+                                <div class="highlight">Base stats</div>
+                                <div class="pokemon-stat">
+                                    <p>HP</p>
+                                    <div class="stat-bar"><div></div></div>
+                                    <p class="pokemon-text">100</p>
+                                </div>
+                                <div class="pokemon-stat">
+                                    <p>Attack</p>
+                                    <div class="stat-bar"><div></div></div>
+                                    <p class="pokemon-text">100</p>
+                                </div>
+                                <div class="pokemon-stat">
+                                    <p>Defence</p>
+                                    <div class="stat-bar"><div></div></div>
+                                    <p class="pokemon-text">100</p>
+                                </div>
+                                <div class="pokemon-stat">
+                                    <p>Sp. Atk</p>
+                                    <div class="stat-bar"><div></div></div>
+                                    <p class="pokemon-text">100</p>
+                                </div>
+                                <div class="pokemon-stat">
+                                    <p>Sp. Def</p>
+                                    <div class="stat-bar"><div></div></div>
+                                    <p class="pokemon-text">100</p>
+                                </div>
+                                <div class="pokemon-stat">
+                                    <p>Speed</p>
+                                    <div class="stat-bar"><div></div></div>
+                                    <p class="pokemon-text">100</p>
+                                </div>
+                            </div>
+                            <div class="line"></div>
+                            <div class="pokemon-abilities">
+                                <div class="highlight">Abilities</div>
+                                <div class="pokemon-ability">
+                                    <div>
+                                        <p class="pokemon-text">Overgrow</p>
+                                        <p class="ability-stat">main</p>
+                                    </div>
+                                    <div>
+                                        <p class="pokemon-text">Chlorophyll</p>
+                                        <p class="ability-stat">Hidden</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="line"></div>
+                            <div class="pokemon-physics">
+                                <div>
+                                    <div class="highlight">Height</div>
+                                    <p class="pokemon-text" id="pokemon-height">0.7 m</p>
+                                </div>
+                                <div>
+                                    <div class="highlight">Weight</div>
+                                    <p class="pokemon-text" id="pokemon-weight">6.9 kg</p>
+                                </div>
+                                <div>
+                                    <div class="highlight">Base XP</div>
+                                    <p class="pokemon-text" id="pokemon-xp">64</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>Created by <a href="https://github.com/billdogg05" target="_blank">billdogg05</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

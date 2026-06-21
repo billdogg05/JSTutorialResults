@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>Rock Paper Scissors</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="../index.html" class="header-title"><img src="../assets/arrow-left.svg" alt="arrow left icon"
+                        class="header-icon">Menu</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <div class="medium-container">
+                <h1>Rock Paper Scissors</h1>
+                <p class="description">Choose one: rock, paper, or scissors and press the PLAY button. Test your luck against the computer, which chooses randomly.</p>
+                <div class="rock-paper-scissors-field">
+                    <div class="rock-paper-scissors-options">
+                        <div>
+                            <input type="radio" name="rock-paper-scissors" id="rock">
+                            <label for="rock"><img src="assets/rock.svg" alt="rock"></label>
+                        </div>
+                        <div>
+                            <input type="radio" name="rock-paper-scissors" id="paper">
+                            <label for="paper"><img src="assets/paper.svg" alt="paper"></label>
+                        </div>
+                        <div>
+                            <input type="radio" name="rock-paper-scissors" id="scissors">
+                            <label for="scissors"><img src="assets/scissors.svg" alt="scissors"></label>
+                        </div>
+                    </div>
+                    <button onclick="play()">play</button>
+                    <p id="error"></p>
+                    <div class="small-container">
+                        <div class="game-results">
+                            <div class="game-res">
+                                <div>
+                                    <h4 id="player">You</h4>
+                                    <div>
+                                        <img src="assets/rock.svg" alt="rock">
+                                    </div>
+                                </div>
+                                <div>
+                                    <h4 id="comp">AI</h4>
+                                    <div>
+                                        <img src="assets/paper.svg" alt="rock">
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="output">you win</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>Created by <a href="https://github.com/billdogg05" target="_blank">billdogg05</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

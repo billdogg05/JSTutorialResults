@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>Clock and Timer</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="../index.html" class="header-title"><img src="../assets/arrow-left.svg" alt="arrow left icon"
+                        class="header-icon">Menu</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <div class="medium-container">
+                <h1>Dice Roller</h1>
+                <p class="description">Roll the dice to see the random total result from N dice. You can roll from 1 to 16 dice at once. Input the number of dice and press the ROLL button.</p>
+                <div class="small-container">
+                    <div class="dice-field">
+                        <div>
+                            <label for="dice">Number of dice</label>
+                            <input type="text" id="dice" placeholder="5">
+                        </div>
+                        <button onclick="rollDice()">Roll</button>
+                        <p id="error"></p>
+                        <div id="diceImg"></div>
+                        <div class="output" id="diceRes"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>Created by <a href="https://github.com/billdogg05" target="_blank">billdogg05</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
